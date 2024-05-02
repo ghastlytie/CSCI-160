@@ -1,0 +1,86 @@
+<<<<<<< HEAD
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1.  Problems observed in play Without the Debugger (I found 3)
+
+The program would not give the player another card.
+Incorrect card math.
+Doesn't register user input for continue question, infinite loop.
+========================================================================
+2.  Problems seen in memory using the Debugger  (I found 9)
+    Specify the line number and what is wrong with the memory value
+    1. Line 174: Should add one to userWins. *
+    2. Line 39: amountOfCurrentBet was initialized as a new variable
+	over the class variable *
+    3. Line 147 & 155: logic always makes userWantsACard false, 
+	should have || *
+    4. Line 86: makes face cards worth 1, 2 or 3 instead of 10 *
+    5. Line 209: never assigns the value of reply to userWantsToPlay
+	therefore, an infinite loop *
+    6. Line 116, 123 & 124: unused variables *
+    7. Line 140: gets the wrong value for sumOfDealerCards *
+    8. Line 176: ties count as the dealer winning *
+
+========================================================================
+3.  Problems fixed: Line number and new code
+     1. Line 174: added a +1 counter for userWins
+     2. LIne 39: removed int to get rid of new initialization of
+	amountOfCurrentBet
+     3. Line 147 & 155: changed && operator to || 
+     4. Line 86: fixed the return statement to return 10 for 10 and face 
+	cards
+     5. Line 209: updated userWantsToPlay variable within while loop
+     6. Line 116, 123 & 124: removed unused variables
+     7. Line 140: changed dealersHoleCard to dealersNextCard
+     8. Line 176: removed an = operator from the logic statement
+	sumOfDealerCards >= sumOfUserCards
+
+========================================================================
+4. What was the hardest part of this lab for you and why was it hard?
+The hardest part was digging through an entire program to search for 
+small errors. It was hard because the IDE doesn't recognize anything is
+wrong so you have to manually search for issues. This shows the
+=======
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1.  Problems observed in play Without the Debugger (I found 3)
+
+The program would not give the player another card.
+Incorrect card math.
+Doesn't register user input for continue question, infinite loop.
+========================================================================
+2.  Problems seen in memory using the Debugger  (I found 9)
+    Specify the line number and what is wrong with the memory value
+    1. Line 174: Should add one to userWins. *
+    2. Line 39: amountOfCurrentBet was initialized as a new variable
+	over the class variable *
+    3. Line 147 & 155: logic always makes userWantsACard false, 
+	should have || *
+    4. Line 86: makes face cards worth 1, 2 or 3 instead of 10 *
+    5. Line 209: never assigns the value of reply to userWantsToPlay
+	therefore, an infinite loop *
+    6. Line 116, 123 & 124: unused variables *
+    7. Line 140: gets the wrong value for sumOfDealerCards *
+    8. Line 176: ties count as the dealer winning *
+
+========================================================================
+3.  Problems fixed: Line number and new code
+     1. Line 174: added a +1 counter for userWins
+     2. LIne 39: removed int to get rid of new initialization of
+	amountOfCurrentBet
+     3. Line 147 & 155: changed && operator to || 
+     4. Line 86: fixed the return statement to return 10 for 10 and face 
+	cards
+     5. Line 209: updated userWantsToPlay variable within while loop
+     6. Line 116, 123 & 124: removed unused variables
+     7. Line 140: changed dealersHoleCard to dealersNextCard
+     8. Line 176: removed an = operator from the logic statement
+	sumOfDealerCards >= sumOfUserCards
+
+========================================================================
+4. What was the hardest part of this lab for you and why was it hard?
+The hardest part was digging through an entire program to search for 
+small errors. It was hard because the IDE doesn't recognize anything is
+wrong so you have to manually search for issues. This shows the
+>>>>>>> 5cdb46566a6ff75efed0969b3fa81367073a165b
+importance of unit testing.

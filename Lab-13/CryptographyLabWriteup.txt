@@ -1,0 +1,30 @@
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1.  Briefly explain random key cryptography.
+For each character in a message, we assign a random number in the range
+of characters to adjust that character by.
+========================================================================
+2.  Look at an ASCII chart and explain the correction we used (97). Why
+    was that necessary?
+97 in an ASCII chart is the 'a' character. This correction makes it so
+the cryptKey[1][i] variable is a letter of the alphabet.
+========================================================================
+3. Explain Integer Errors. How do we prevent them?
+An integer would be taken as the decimal ASCII value so it could try to
+use an error causing character instead of that number. We prevent them 
+by checking to see if the character is a digit when entered.
+========================================================================
+4. Explain input errors.  How do we prevent them?
+Input errors are when the user gives an input that isn't accepted by
+the code and causes an error. We prevent this by catching what could
+cause an error like this. I ensured that any input was above a decimal
+value of 97 so when guessMatches is called it wouldn't try to use a
+negative value in an array call.
+========================================================================
+5. What was the quote that you solved?
+"Recognizing the need is the primary condition for design."
+Charles Eames, American designer
+========================================================================
+6. What was the hardest part of this lab for you and why was it hard.
+Fixing the input error for non-alphanumerical characters. It was hard
+because I had to debug the code and find where the issue was occuring.

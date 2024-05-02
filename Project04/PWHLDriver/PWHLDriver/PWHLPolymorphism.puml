@@ -1,0 +1,131 @@
+@startuml
+class PWHLDriver {
+    - league : League
+    - choices : TreeSet<Character>
+    + getMenuChoice(Scanner) : char
+    + run(String)
+    + main(String[])
+}
+class League {
+    - teams: TreeMap<String, Team>
+    + League(Scanner)
+    - readTeam(Scanner, String): Team
+    - readPlayer(Scanner, int): Player
+    - noTeam(String): String
+    + lookupPlayer(String, int): String
+    + calcLeagueStats(): String
+}
+class Team{
+    - name: String
+    - gamesPlayed: int
+    - win: int
+    - loss: int
+    - overtimeWin: int
+    - overtimeLoss: int
+    - roster: TreeMap<Integer, Player>
+    - noPlayer(int): String
+    + lookupPlayer(int): String
+    + calcTeamStats(): String
+    + getSkaters(): Skater[]
+    + getGoalies(): Goalie[]
+    + getWins(): int
+    + getLosses(): int
+    + getOvertimeWins(): int
+    + getOvertimeLosses(): int
+}
+abstract class Player implements Comparable{
+    # number: int
+    # name: String
+    # position: char
+    # gamesPlayed: int
+    # Goals: int
+    # Assists: int
+    # PenaltyInfractionMinutes: int
+    # Player(int, String, char, int, int, int, int)
+    # getNumber(): int
+    # getName(): String
+    # getPosition(): int
+    # getGoals(): int
+    # getAssists(): int
+    # getPIM(): int
+    + toString(): String
+    + compareTo(Player): int
+}
+class Skater extends Player{
+    - plusMinus: int
+    - powewrplayGoal: int
+    - powerplayAssist: int
+    - pointsPerGame: double
+    - shorthandGoal: int
+    - shorthandAssist: int
+    - faceoffWin: int
+    - numFaceoff: int
+    - wonFaceoffPercent: double
+    - penaltyMinutesPerGame: double
+    - shots: int
+    - shotPercent: double
+    - shootoutGoal: int
+    - shootoutAssist: int
+    + Skater(int, String, char, int, int, int, int
+             int, int, int, int, int, int, int, int, int, int)
+    + getPoints(): int
+    + getPlusMinus(): int
+    + getPowewrplayGoals(): int
+    + getPowerplayAssists(): int
+    + getPointsPerGame(): double
+    + getShorthandGoals(): int
+    + getShorthandAssists(): int
+    + getFaceoffWins(): int
+    + getNumFaceoff(): int
+    + getWonFaceoffPercent(): double
+    + getPenaltyMinutesPerGame(): double
+    + getShots(): int
+    + getShotPercent(): double
+    + getShootoutGoals(): int
+    + getShootoutAssists(): int
+    + toString(): String
+}
+class Goalie extends Player{
+    - minutesPlayed: int
+    - secondsPlayed: int
+    - goalsAgainst: int
+    - shutouts: int
+    - goalsAgainstAverage: double
+    - win: int
+    - loss: int
+    - overtime: int
+    - saves: int
+    - shotsAgainst: int
+    - savePercent: double
+    - shootoutReceived: int
+    - shootoutGoal: int
+    - shootoutSavePercent: double
+    + Goalie(int, String, char, int, int, int, int,
+             String, int, int, int, int, int, int, int, int, int)
+    + getTimePlayed(): String
+    + getGoalsAgainst(): int
+    + getShutouts(): int
+    + getGoalsAgainstAverage(): double
+    + getWins(): int
+    + getLosses(): int
+    + getOvertime(): int
+    + getSaves(): int
+    + getShotsAgainst(): int
+    + getSavePercent(): double
+    + getShootoutReceived(): int
+    + getShootoutGoal(): int
+    + getShootoutSavePercent(): double
+    + toString(): String
+}
+interface Comparable{
+    {abstract} +compareTo(E): int
+}
+PWHLDriver -- League : depends
+League "1" *-- "0..*" Team
+Team "1" o-- "0..*" Player
+
+note right of Comparable
+    If we implement Comparable<E super Player> we can compare
+    players together and sort them when displaying the roster.
+end note
+@enduml

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"pwhldriver","l":"Goalie"},{"p":"pwhldriver","l":"League"},{"p":"pwhldriver","l":"Player"},{"p":"pwhldriver","l":"PWHLDriver"},{"p":"pwhldriver","l":"Skater"},{"p":"pwhldriver","l":"Team"}];updateSearchResults();

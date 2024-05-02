@@ -1,0 +1,72 @@
+<<<<<<< HEAD
+Do Not allow your lines to be longer than the line of "=" characters.
+Please leave the font at 12 pt.  Answers are in the lab instructions or 
+in reading comments and code. The Java API has answers too. 
+========================================================================
+1. What does System.err.println("some message."); do? Be specific.
+
+It ouputs the given message to the console in the same color as errors.
+========================================================================
+2. What is a unit test? 
+
+A unit test is a test performed on a small piece of code to ensure it
+works before you create an entire program and have to dig through it
+to find an error.
+========================================================================
+3. When we catch a FileNotFoundException on trying to open a file for 
+   input, it means there is no file with that name on disk.  What does 
+   it mean when we catch a FileNotFoundException on trying to open a 
+   file for output?
+
+It means there is no file with that name on the disk.
+========================================================================
+4. String.format(), printf, and StringBuilder were all used in 
+   this project.  Why did we need the StringBuilder in Orders?
+
+We used StringBuilder to allow us to continue appending onto the string
+until we were finished adding all the orders.
+========================================================================
+5. In String.format() (or printf) What does the descriptor "%08d" do?
+
+It prints a given integer value with 8 left justified digits and leading
+zeros if there are less than 8 digits given.
+========================================================================
+6. What was the hardest part of this lab for you and why was it hard.
+The hardest part was working through the difference between the 
+=======
+Do Not allow your lines to be longer than the line of "=" characters.
+Please leave the font at 12 pt.  Answers are in the lab instructions or 
+in reading comments and code. The Java API has answers too. 
+========================================================================
+1. What does System.err.println("some message."); do? Be specific.
+
+It ouputs the given message to the console in the same color as errors.
+========================================================================
+2. What is a unit test? 
+
+A unit test is a test performed on a small piece of code to ensure it
+works before you create an entire program and have to dig through it
+to find an error.
+========================================================================
+3. When we catch a FileNotFoundException on trying to open a file for 
+   input, it means there is no file with that name on disk.  What does 
+   it mean when we catch a FileNotFoundException on trying to open a 
+   file for output?
+
+It means there is no file with that name on the disk.
+========================================================================
+4. String.format(), printf, and StringBuilder were all used in 
+   this project.  Why did we need the StringBuilder in Orders?
+
+We used StringBuilder to allow us to continue appending onto the string
+until we were finished adding all the orders.
+========================================================================
+5. In String.format() (or printf) What does the descriptor "%08d" do?
+
+It prints a given integer value with 8 left justified digits and leading
+zeros if there are less than 8 digits given.
+========================================================================
+6. What was the hardest part of this lab for you and why was it hard.
+The hardest part was working through the difference between the 
+>>>>>>> 5cdb46566a6ff75efed0969b3fa81367073a165b
+instructions and what had been changed in the lab.

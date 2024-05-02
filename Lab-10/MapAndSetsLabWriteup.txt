@@ -1,0 +1,20 @@
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1.  In English, what is the algorithm for a linear search?
+
+
+========================================================================
+2.  In English, what is the algorithm for a binary search?
+
+
+========================================================================
+3.  What is the difference between a TreeMap and a HashMap? 
+
+
+========================================================================
+4.  What are the Set Methods for set difference, set union, and set 
+    intersection?
+
+
+========================================================================
+5.  What was the hardest part of this lab for you and why was it hard.

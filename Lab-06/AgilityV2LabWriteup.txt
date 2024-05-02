@@ -1,0 +1,21 @@
+Do Not allow your lines to be longer than the line of "=" characters.
+========================================================================
+1. What does it mean to say "Pet inherits from Dog"?  
+The pet class gets some of it's methods from dog and can add more 
+methods on top of it that are exclusive to pet.
+========================================================================
+2. Why does Dog depend on Date, but Pet and Competitor don't?
+Dog depends on Date to get the date of birth for the dog. Pet and 
+Competitor don't depend on Date because they inherit the date 
+dependency from Dog.
+========================================================================
+3. Why are there parameters in the Competitor constructor that are not
+   properties of Competitor?
+There are parameters in Competitor that are not properties of Competitor
+because it needs to pass those parameters to the constructor of it's
+super class.
+========================================================================
+4. What was the hardest part of this lab for you and why was it hard.
+The hardest part of the lab was editing the code to fit the new classes.
+It was hard because I find it easier to write code from scratch than 
+change bits and pieces of larger chunks of code.
